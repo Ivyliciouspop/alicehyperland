@@ -1,0 +1,73 @@
+/* ~/.config/rofi/waybar-match.rasi
+   Rofi theme matching the waybar look */
+
+* {
+    bg:        rgba(44, 46, 75, 0.85);
+    bg-dark:   #25263f;
+    surface:   #34365a;
+    selected:  #45475a;
+    fg:        rgba(241, 255, 255, 0.85);
+    fg-dim:    rgba(241, 255, 255, 0.5);
+    line:      rgba(241, 255, 255, 0.7);
+
+    font:             "JetBrainsMono Nerd Font 12";
+    background-color: transparent;
+    text-color:       @fg;
+}
+
+window {
+    width:            600px;
+    background-color: @bg;
+    border:           0 0 3px 0;
+    border-color:     @line;
+    border-radius:    16px;
+    padding:          14px;
+}
+
+mainbox {
+    spacing: 10px;
+}
+
+inputbar {
+    background-color: @surface;
+    border-radius:    12px;
+    padding:          8px 12px;
+    spacing:          8px;
+    children:         [ prompt, entry ];
+}
+
+prompt {
+    text-color: @fg-dim;
+}
+
+entry {
+    placeholder:       "Search...";
+    placeholder-color: @fg-dim;
+}
+
+listview {
+    lines:   8;
+    spacing: 4px;
+    scrollbar: false;
+}
+
+element {
+    padding:       8px 12px;
+    border-radius: 12px;
+    spacing:       10px;
+}
+
+element selected.normal,
+element selected.active {
+    background-color: @selected;
+    text-color:       #f1ffff;
+}
+
+element-icon {
+    size: 22px;
+}
+
+element-text {
+    text-color:     inherit;
+    vertical-align: 0.5;
+}
