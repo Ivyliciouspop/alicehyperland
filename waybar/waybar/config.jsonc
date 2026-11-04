@@ -1,0 +1,13 @@
+{
+    "layer": "top",
+    "position": "top",
+    "width": 1910,
+    "height": 25,
+    "margin": "5 0",
+
+    "modules-left"   : ["group/left-hidden-top", "group/left"],
+    "modules-center" : ["clock"],
+    "modules-right"  : [ "group/right",  "group/right-hidden-top"],
+
+    "include": [ "~/.config/waybar/modules.jsonc" ]
+}
