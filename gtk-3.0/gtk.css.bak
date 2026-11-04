@@ -1,0 +1,121 @@
+/* ~/.config/gtk-3.0/gtk.css
+   Waybar-matched palette for GTK3 apps (Adwaita-dark base) */
+
+/* ---- Palette ---- */
+@define-color bar_bg      #2c2e4b;
+@define-color bar_bg_dark #25263f;
+@define-color bar_surface #34365a;
+@define-color bar_raised  #45475a;
+@define-color bar_fg      rgba(241, 255, 255, 0.85);
+@define-color bar_line    rgba(241, 255, 255, 0.7);
+@define-color bar_accent  #b4befe;
+
+/* ---- Theme colors GTK3 themes read ---- */
+@define-color theme_bg_color           @bar_bg;
+@define-color theme_fg_color           @bar_fg;
+@define-color theme_base_color         @bar_bg_dark;
+@define-color theme_text_color         @bar_fg;
+@define-color theme_selected_bg_color  @bar_raised;
+@define-color theme_selected_fg_color  #f1ffff;
+@define-color insensitive_bg_color     @bar_bg;
+@define-color insensitive_fg_color     rgba(241, 255, 255, 0.4);
+@define-color borders                  rgba(0, 0, 0, 0.35);
+@define-color unfocused_borders        rgba(0, 0, 0, 0.25);
+
+/* ---- Widgets ---- */
+* {
+  font-family: "JetBrainsMono Nerd Font", "Maple Mono NF", monospace;
+}
+
+window, .background {
+  background-color: @bar_bg;
+  color: @bar_fg;
+}
+
+headerbar, .titlebar {
+  background: @bar_bg_dark;
+  color: @bar_fg;
+  border: none;
+  box-shadow: inset 0 -2px @bar_line;
+}
+
+treeview, textview text, list, .view {
+  background-color: @bar_bg_dark;
+  color: @bar_fg;
+}
+
+entry {
+  background: @bar_surface;
+  color: @bar_fg;
+  border-radius: 12px;
+  border-color: transparent;
+}
+
+button {
+  background: @bar_surface;
+  color: @bar_fg;
+  border-radius: 12px;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+button:hover {
+  background: @bar_raised;
+}
+
+*:selected, row:selected {
+  background-color: @bar_raised;
+  color: #f1ffff;
+}
+
+popover, menu, .menu, .context-menu {
+  background-color: @bar_surface;
+  color: @bar_fg;
+  border-radius: 12px;
+}
+
+link, *:link {
+  color: @bar_accent;
+}
+
+/* ---- Thunar: soft sky blue ---- */
+.thunar,
+.thunar .view,
+.thunar iconview,
+.thunar treeview,
+.thunar scrolledwindow,
+.thunar statusbar {
+  background-color: #d6e6f2;
+  color: #2c2e4b;
+}
+
+.thunar placessidebar,
+.thunar placessidebar list,
+.thunar .sidebar,
+.thunar toolbar,
+.thunar menubar {
+  background-color: #c6d9e8;
+  color: #2c2e4b;
+}
+
+.thunar entry,
+.thunar button {
+  background: #e3eef6;
+  color: #2c2e4b;
+}
+
+.thunar button:hover {
+  background: #b9d0e3;
+}
+
+.thunar *:selected,
+.thunar .view:selected,
+.thunar iconview:selected,
+.thunar row:selected {
+  background-color: #8fb3d1;
+  color: #1f2036;
+}
+
+.thunar * {
+  color: #2c2e4b;
+}
